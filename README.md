@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **WORK IN POGRESS**
 
 # Algorithmique : explications et codes.
@@ -76,3 +77,6 @@ Même remarque pour les algorithmes exponentiels, mais en pire. Pour 100 donnée
 Ces deux derniers types d'algorithmes produisent des résultats, mais dans un temps indéterminé : ils sont dits "incalculables". Ce sont des algorithmes extrêmement complexes qui opèrent dans les sphères de l'intelligence artificielles, de la programmation de systèmes très complexes liés à des organes qui le sont tout autant, les modélisations météorologiques etc.
 
 [^1] : Le propre d'une moyenne est d'être une représentation archétypale mais pas nécessaire d'un ensemble de données. Si pour une donnée à trouver parmi 100 données la moyenne est de 50 instructions à opérer (O(N / 2)), cela ne veut pas dire qu'à tous les coups il y aura 50 instructions d'opérées. Dans l'optique d'une analyse pessimiste, nous aurions N instructions à faire, N correspondant au nombre maximal de données à analyser (O(N)).
+=======
+#algorithmique
+>>>>>>> 99900594333071276b69d67f542ed1648772131c
