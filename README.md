@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 **WORK IN POGRESS**
 
 # Algorithmique : explications et codes.
@@ -41,11 +40,13 @@ Où "O" indique que l'analyse porte sur la limite supérieure des données à an
 ## Les familles de complexité
 
 **=>** Les algorithmes logarithmiques : `O(log2(N))`
+
 COmme le montre assez clairement la représentation ci-dessus, la complexité dans le pire des cas sera du logarithme du nombre N d'éléments à analyser, ce qui en fait sans conteste d'un algorithme extrêmement rapide. A titre d'exemple, pour 10 000 données à traiter s'il s'agit d'un algorithme logarithmique, il faudra au pire des cas 4 instructions si on considère un logarithme en base 10 (log10(N)) alors qu'un algo linéaire (O(N)) il en faudrait 10 000. Concernant les algorithmes qui nous intéressent, le logarithme est en base 2, car les algorithmes logarithmiques opèrent généralement des divisions par 2 succesives du tas de données à traiter jusque trouver la donnée souhaitée. Ainsi, pour 10 000 données :
 
 `O(log2(10 000) = 13,28771238`  instructions dans le pire des cas.
 
 **=>** Les algorithmes linéraires : `O(N)`
+
 La complexité dépend de façon linéaire au nombre de données à calculer. Ainsi pour 10 000 et une complexité de 0(N) :
 
 `0(10 000) = 10 000` instructions dans le pire des cas.
@@ -77,6 +78,3 @@ Même remarque pour les algorithmes exponentiels, mais en pire. Pour 100 donnée
 Ces deux derniers types d'algorithmes produisent des résultats, mais dans un temps indéterminé : ils sont dits "incalculables". Ce sont des algorithmes extrêmement complexes qui opèrent dans les sphères de l'intelligence artificielles, de la programmation de systèmes très complexes liés à des organes qui le sont tout autant, les modélisations météorologiques etc.
 
 [^1] : Le propre d'une moyenne est d'être une représentation archétypale mais pas nécessaire d'un ensemble de données. Si pour une donnée à trouver parmi 100 données la moyenne est de 50 instructions à opérer (O(N / 2)), cela ne veut pas dire qu'à tous les coups il y aura 50 instructions d'opérées. Dans l'optique d'une analyse pessimiste, nous aurions N instructions à faire, N correspondant au nombre maximal de données à analyser (O(N)).
-=======
-#algorithmique
->>>>>>> 99900594333071276b69d67f542ed1648772131c
