@@ -6,13 +6,12 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 15:55:46 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/27 17:06:22 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/27 17:09:46 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 /*
 * Ici on remplit le tableau de int (integer)
@@ -41,6 +40,7 @@ int	*fill_tab(char **av, int size)
 	return (tab);
 }
 
+//On l'imprime
 void	print_tab(int *tab, int size)
 {
 	int	i;
@@ -52,6 +52,7 @@ void	print_tab(int *tab, int size)
 	printf("]\n");
 }
 
+//On insère le nouvel élément
 int	*insert_elem(int *prev_tab, int prev_size, int nb, int pos)
 {
 	int	*new_tab;

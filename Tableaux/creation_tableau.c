@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chargement_tableau.c                               :+:      :+:    :+:   */
+/*   creation_tableau.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 15:55:46 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/27 16:32:26 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/27 17:10:34 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	*fill_tab(char **av, int size)
 	return (tab);
 }
 
+//On imprime
 void	print_tab(int *tab, int size)
 {
 	int	i;
@@ -61,6 +62,7 @@ int	main(int ac, char **av)
 		print_tab(tab, ac - 1);
 		//On libère la mémoire allouée via malloc.
 		free(tab);
+		tab = NULL;
 		return (0);
 	}
 	else
