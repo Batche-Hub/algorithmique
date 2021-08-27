@@ -6,7 +6,7 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 15:55:46 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/27 17:38:29 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/27 17:39:53 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ int	*insert_elem(int *prev_tab, int prev_size, int nb, int pos)
 	return (new_tab);
 }
 
+//On modifie
 void	modif_elem(int *tab, int size, int nb, int pos)
 {
 	int	i;
@@ -97,6 +98,7 @@ void	modif_elem(int *tab, int size, int nb, int pos)
 	}
 }
 
+//On supprime
 int	*suppr_elem(int *prev_tab, int prev_size, int pos)
 {
 	int	*new_tab;
@@ -104,7 +106,7 @@ int	*suppr_elem(int *prev_tab, int prev_size, int pos)
 	int	j;
 	int	new_size;
 
-	//on crée un nouveau tableau via malloc de la taille précédente + 1
+	//on crée un nouveau tableau via malloc de la taille précédente - 1
 	new_tab = malloc(sizeof(int) * (prev_size - 1));
 	if (!new_tab)
 		return (NULL);
