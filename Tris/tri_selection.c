@@ -6,7 +6,7 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:45:00 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/29 12:00:58 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/29 12:02:00 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,5 @@ int main(int ac, char **av)
 		printf("Veuillez rentrer un ou plusieurs arguments.");
 		return (-1);
 	}
+	return (0);
 }
