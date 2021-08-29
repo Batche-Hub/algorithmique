@@ -6,55 +6,80 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:45:00 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/27 18:52:13 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/29 12:00:58 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int *tri_selection(char **av, int size)
+void	print_tab(int *tab, int size)
 {
-	int *tab;
-	int i;
-	int j;
-	int k;
-	int min;
-	int mem_size;
-	int count;
+	int	i;
 
-	count = 0;
-	mem_size = size;
+	i = 0;
+	while (size--)
+		printf("%d\n", tab[i++]);
+}
+
+int	*fill_tab(char **av, int size)
+{
+	int	*tab;
+	int	i;
+
 	tab = malloc(sizeof(int) * size);
 	if (!tab)
-		return;
+		return (NULL);
 	i = 0;
 	while (size--)
 	{
 		tab[i] = atoi(av[i + 1]);
 		i++;
 	}
+	return (tab);
+}
+
+void	ft_min(int *tab, int j, int size, int *min)
+{
+	while (j < size)
+	{
+		if (tab[j] < tab[(*min)])
+			(*min) = j;
+		j++;
+	}
+}
+
+void	ft_swap(int *tab, int i, int min)
+{
+	int	temp;
+
+	temp = tab[i];
+	tab[i] = tab[min];
+	tab[min] = temp;
+}
+
+void	tri_selection(char **av, int size)
+{
+	int	*tab;
+	int	min;
+	int	i;
+	int	j;
+
+	tab = fill_tab(av, size);
+	printf("Tableau avant tri :\n");
+	print_tab(tab, size);
 	i = 0;
-	while (i < mem_size)
+	while (i < size - 1)
 	{
 		min = i;
 		j = i + 1;
-		while (j < mem_size)
-		{
-			if (tab[j] < tab[min])
-				min = j;
-			j++;
-		}
-		if (min != i)
-		{
-			k = tab[i];
-			tab[i] = tab[min];
-			tab[min] = k;
-			count++;
-		}
+		ft_min(tab, j, size, &min);
+		ft_swap(tab, i, min);
 		i++;
 	}
-	printf("%d", count);
-	return (tab);
+	printf("\nTableau après tri :\n");
+	print_tab(tab, size);
+	free(tab);
 }
 
 int main(int ac, char **av)
