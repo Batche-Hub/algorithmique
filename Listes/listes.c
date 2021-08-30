@@ -6,55 +6,11 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 17:28:30 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/30 19:36:57 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/30 19:38:20 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "liste.h"
-
-static int	ft_isspace_int(int c)
-{
-	const char	*spaces;
-
-	spaces = " \t\n\r\v\f";
-	while (*spaces)
-	{
-		if ((unsigned char)c == *spaces)
-			return (1);
-		spaces++;
-	}
-	return (0);
-}
-
-int	ft_atoi(const char *nptr)
-{
-	int	res;
-	int	sign;
-	int	count;
-
-	res = 0;
-	sign = 1;
-	count = 0;
-	while (ft_isspace_int((int)*nptr))
-		nptr++;
-	if (*nptr == '+' || *nptr == '-')
-	{
-		if (*nptr == '-')
-			sign *= -1;
-		nptr++;
-	}
-	while (++count && *nptr >= '0' && *nptr <= '9' && *nptr)
-	{
-		if (count > 19 && sign == -1)
-			return (0);
-		else if (count > 19 && sign == 1)
-			return (-1);
-		res = res * 10 + *nptr - 48;
-		nptr++;
-	}
-	return (res * sign);
-}
-
 
 // Le linker est là afin de faciliter le travail de la liste.
 // Il regroupe la premier élément de la liste, ainsi que le dernier.
@@ -187,7 +143,7 @@ int	main(int ac, char **av)
 	if (ac > 1)
 	{
 		while (i < ac)
-			ft_lst_pushback((void *) (intptr_t) ft_atoi(av[i++]), &lnk);
+			ft_lst_pushback((void *) (intptr_t) atoi(av[i++]), &lnk);
 		ft_print_lst(lnk);
 		ft_clear_lst(&lnk);
 	}
