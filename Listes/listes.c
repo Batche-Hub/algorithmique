@@ -6,7 +6,7 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 17:28:30 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/30 19:38:20 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/30 19:47:19 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,8 +135,8 @@ void	ft_clear_lst(t_linker *linker)
 
 int	main(int ac, char **av)
 {
-	t_linker lnk;
-	int		i;
+	t_linker	lnk;
+	int			i;
 
 	i = 1;
 	init_linker(&lnk);
