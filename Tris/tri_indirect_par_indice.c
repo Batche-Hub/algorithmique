@@ -6,7 +6,7 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:54:17 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/31 11:29:31 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/31 11:32:09 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
  *   1    3   18  <= Tableau trié.
  * 
  * L'intérêt principal réside dans le fait que le rangemernt ne se fait qu'une fois pour le tableau trié.
- * D'une certaine façon, cela agit un peu comme des pointeurs mais sans pointeurs.
+ * D'une certaine façon, cela agit un peu comme des pointeurs mais sans pointeurs (pas d'adressage).
  * Une méthode consiste à faire la même chose mais avec de vrais pointeurs par ailleurs.
 **/
 
