@@ -6,7 +6,7 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:54:17 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/31 11:25:55 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/08/31 11:29:31 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ int	main(void)
 	tri_indirect_indices(tab, index, 10);
 	print(tab, index, 10);
 	organise(tab, index, 10);
-	// Ici vu que le tableau d'indice est déjà trié, le tableau des valeur semble trié.
+	// Ici vu que le tableau d'indices est déjà trié, le tableau des valeurs semble trié.
 	// C'est bien le cas, mais si nous n'avions pas fait la régorganisation des valeurs, ce ne serait pas le cas
 	// (nous n'avions réorganisé que le tableau des indices).
 	print(tab, index, 10);
