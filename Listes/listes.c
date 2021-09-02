@@ -6,7 +6,7 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 17:28:30 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/30 19:47:19 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/09/02 16:46:49 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ void	ft_lst_pushback(void *content, t_linker *linker)
 		linker->first = new_list;
 	// Dans tous les ca son enregistre la nouvelle structure comme étant le dernier élément de la liste.
 	linker->last = new_list;
+	new_list->next = NULL;
+	new_list->prev = NULL;
 }
 
 void	ft_lst_pushfront(void *content, t_linker *linker)
@@ -70,6 +72,8 @@ void	ft_lst_pushfront(void *content, t_linker *linker)
 		linker->last = new_list;
 	// Dans tous les ca son enregistre la nouvelle structure comme étant le premier élément de la liste.
 	linker->first = new_list;
+	new_list->next = NULL;
+	new_list->prev = NULL;
 }
 
 int	ft_lst_removeback(t_linker *linker)
