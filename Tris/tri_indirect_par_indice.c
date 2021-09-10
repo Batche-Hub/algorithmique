@@ -6,7 +6,7 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:54:17 by chbadad           #+#    #+#             */
-/*   Updated: 2021/09/10 17:34:27 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/09/10 17:35:05 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void tri_indirect_indices(int tab[], int index[], int size)
 		// On place la valeur de l'indice à la bonne place (on ne place pas la valeur du tableau à la bonne place)
 		// Cela veut dire que si on un tableau tab[3] = {20, -5, 30}; l'indice de la valeur 20 à tab[0] sera "placé"
 		// en index[1] = 0. Aka : la valeur 20 avec l'indice 0 dans le tableau non trié sera placée à
-		// l'indice 1 dans le tableau non trié.
+		// l'indice 1 dans le tableau trié.
 		index[j] = index_val;
 	}
 }
