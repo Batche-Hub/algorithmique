@@ -6,7 +6,7 @@
 /*   By: chbadad <chbadad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:54:17 by chbadad           #+#    #+#             */
-/*   Updated: 2021/08/31 11:32:09 by chbadad          ###   ########.fr       */
+/*   Updated: 2021/09/10 17:34:27 by chbadad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,9 @@ void tri_indirect_indices(int tab[], int index[], int size)
 			j--;
 		}
 		// On place la valeur de l'indice à la bonne place (on ne place pas la valeur du tableau à la bonne place)
+		// Cela veut dire que si on un tableau tab[3] = {20, -5, 30}; l'indice de la valeur 20 à tab[0] sera "placé"
+		// en index[1] = 0. Aka : la valeur 20 avec l'indice 0 dans le tableau non trié sera placée à
+		// l'indice 1 dans le tableau non trié.
 		index[j] = index_val;
 	}
 }
@@ -72,16 +75,16 @@ void print(int tab[], int index[], int size)
 
 	printf("   Tableau direct des valeurs  : ");
 	for (i = 0; i < size; i++)
-		printf("%10d", tab[i]);
+		printf("%d ", tab[i]);
 	printf("\n");
-	printf("   Tableau des indices         : ");
-	for (i = 0; i < size; i++)
-		printf("%10d", index[i]);
-	printf("\n");
-	printf("   Tableau indirect des valeurs: ");
-	for (i = 0; i < size; i++)
-		printf("%10d", tab[index[i]]);
-	printf("\n");
+	// printf("   Tableau des indices         : ");
+	// for (i = 0; i < size; i++)
+	// 	printf("%10d", index[i]);
+	// printf("\n");
+	// printf("   Tableau indirect des valeurs: ");
+	// for (i = 0; i < size; i++)
+	// 	printf("%10d", tab[index[i]]);
+	// printf("\n");
 }
 
 void organise(int tab[], int index[], int size)
@@ -114,14 +117,14 @@ void organise(int tab[], int index[], int size)
 
 int	main(void)
 {
-	int tab[10] = {-1, 50, -210, 13, 0, 0, 4810, 78, -145, 1};
-	int index[10];
-	tri_indirect_indices(tab, index, 10);
-	print(tab, index, 10);
-	organise(tab, index, 10);
+	int tab[100] = {86, 5, 11, 15, 33, 70, 40, 4, 68, 30, 63, 64, 49, 2, 44, 71, 56, 98, 89, 83, 13, 23, 26, 24, 14, 35, 62, 50, 74, 46, 21, 75, 90, 61, 93, 28, 58, 3, 7, 81, 99, 79, 73, 20, 72, 1, 87, 78, 51, 25, 39, 53, 92, 37, 91, 32, 6, 16, 0, 52, 18, 9, 12 ,59, 8, 96, 45, 77, 69, 94, 43, 27, 42, 48, 47, 57, 66, 55, 31, 95, 67, 10, 19, 88, 80, 97, 22, 34, 65, 41, 29, 76, 60, 84, 54, 85, 82, 38, 36, 17};
+	int index[100];
+	tri_indirect_indices(tab, index, 100);
+	// print(tab, index, 100);
+	organise(tab, index, 100);
 	// Ici vu que le tableau d'indices est déjà trié, le tableau des valeurs semble trié.
 	// C'est bien le cas, mais si nous n'avions pas fait la régorganisation des valeurs, ce ne serait pas le cas
 	// (nous n'avions réorganisé que le tableau des indices).
-	print(tab, index, 10);
+	print(tab, index, 100);
 	return (0);
 }
